@@ -1,0 +1,27 @@
+site_name: My Dev Knowledge Base
+nav: 
+ - Home : index.md
+ - Salesforce :
+   - LWC DraftSetup : Salesforce/lwcSetup.md
+ - Mulesoft : 
+   - Create RAML File : Mulesoft/
+theme:
+  name: material
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
