@@ -2,9 +2,14 @@ site_name: My Dev Knowledge Base
 nav: 
  - Home : index.md
  - Salesforce :
-   - LWC DraftSetup : Salesforce/lwcSetup.md
+   - Formstack : Salesforce/Formstack.md
+   - JSON-to-SObject : Salesforce/JSON-to-SObject.md
+   - SobjectChangeHandler : Salesforce/SobjectChangeHandler.md
+   - VirtualRemoteAssistant : Salesforce/VirtualRemoteAssistant.md
+   - gitFlow : Salesforce/gitFlow.md
+   - parseDate : Salesforce/parseDate.md
  - Mulesoft : 
-   - Create RAML File : Mulesoft/
+   - AzureKeyVault : Mulesoft/AzureKeyVault.md
 theme:
   name: material
   language: en
