@@ -1,0 +1,987 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Generic SObject Change Handler – Documentation - My Dev Knowledge Base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#generic-sobject-change-handler-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Dev Knowledge Base" class="md-header__button md-logo" aria-label="My Dev Knowledge Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Dev Knowledge Base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Generic SObject Change Handler – Documentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lwcSetup.md" class="md-tabs__link">
+          
+  
+  
+  Salesforce
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Mulesoft/" class="md-tabs__link">
+          
+  
+  
+  Mulesoft
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Dev Knowledge Base" class="md-nav__button md-logo" aria-label="My Dev Knowledge Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Dev Knowledge Base
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Salesforce
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Salesforce
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lwcSetup.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LWC DraftSetup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Mulesoft
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Mulesoft
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mulesoft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create RAML File
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Purpose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Class Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Key Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Key Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-change-tracking-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Change Tracking Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-integration-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Integration Event
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-public-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Public Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Public Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#processchangedfieldslistsobject-oldrecords-listsobject-newrecords" class="md-nav__link">
+    <span class="md-ellipsis">
+      processChangedFields(List&lt;SObject&gt; oldRecords, List&lt;SObject&gt; newRecords)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-private-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Private Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Private Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#createintegrationeventsstring-payload-string-objecttype-string-requesttype" class="md-nav__link">
+    <span class="md-ellipsis">
+      createIntegrationEvents(String payload, String objectType, String requestType)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      publishEvent()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-generic-processing-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Generic Processing Logic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-example-json-payload-published-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Example JSON Payload (Published Event)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-flow-trigger-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Flow / Trigger Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="generic-sobject-change-handler-documentation"><strong>Generic SObject Change Handler – Documentation</strong></h1>
+<h2 id="purpose">✅ <strong>Purpose</strong></h2>
+<p>This Apex class tracks field changes on SObjects and automatically publishes integration events whenever configured fields change.</p>
+<p>It is designed to:</p>
+<ul>
+<li>Be triggered from <strong>Record-Triggered Flows</strong>, Apex triggers, or batch processes</li>
+<li>Dynamically determine which fields to track via <strong>Custom Metadata</strong> (<code>Object_Fields_Change__mdt</code>)</li>
+<li>Serialize changed fields into a JSON payload</li>
+<li>Publish events to <strong>Platform Events</strong> (<code>Outbound_Integration_Event__e</code>)</li>
+</ul>
+<p>This generic approach supports any object without hard-coding field names or object names.</p>
+<hr />
+<h2 id="class-overview">✅ <strong>Class Overview</strong></h2>
+<pre><code class="language-apex">public class GenericObjectChangeHandler { ... }
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Detects field changes</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Configurable via Custom Metadata</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Creates JSON payloads</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Publishes to Platform Events</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Supports any SObject</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="key-components">✅ <strong>Key Components</strong></h2>
+<h3 id="1-change-tracking-configuration"><strong>1. Change Tracking Configuration</strong></h3>
+<ul>
+<li><strong>Custom Metadata Type</strong>: <code>Object_Fields_Change__mdt</code></li>
+<li><strong>Field</strong>: <code>Field_List__c</code></li>
+<li><strong>DeveloperName</strong>: Set to the SObject API Name (e.g., <code>Account</code>, <code>Contact</code>, <code>Custom_Object__c</code>)</li>
+<li><strong>Purpose</strong>: Defines which fields are monitored for changes.</li>
+</ul>
+<hr />
+<h3 id="2-integration-event"><strong>2. Integration Event</strong></h3>
+<ul>
+<li><strong>Platform Event</strong>: <code>Outbound_Integration_Event__e</code></li>
+<li><strong>Payload</strong>: Contains changed field names and values, plus record identifiers.</li>
+<li>
+<p><strong>Fields</strong>:</p>
+</li>
+<li>
+<p><code>Object__c</code> → SObject API name</p>
+</li>
+<li><code>Payload__c</code> → JSON of changed fields</li>
+<li><code>RecordId__c</code> → Salesforce Record Id</li>
+<li><code>Request_Type__c</code> → Contextual type of request</li>
+<li><code>OH_Ref_Number__c</code> → Optional reference field (genericized)</li>
+</ul>
+<hr />
+<h3 id="3-public-methods"><strong>3. Public Methods</strong></h3>
+<h4 id="processchangedfieldslistsobject-oldrecords-listsobject-newrecords"><code>processChangedFields(List&lt;SObject&gt; oldRecords, List&lt;SObject&gt; newRecords)</code></h4>
+<pre><code class="language-apex">public static void processChangedFields(List&lt;SObject&gt; oldRecords, List&lt;SObject&gt; newRecords)
+</code></pre>
+<p><strong>Purpose</strong>: Detects changes on configured fields and generates integration events.</p>
+<p><strong>Parameters</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>oldRecords</code></td>
+<td>List<SObject></td>
+<td>Records before changes (can be <code>null</code>)</td>
+</tr>
+<tr>
+<td><code>newRecords</code></td>
+<td>List<SObject></td>
+<td>Records after changes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Logic</strong>:</p>
+<ol>
+<li>Determine which fields to check via <code>Object_Fields_Change__mdt</code>.</li>
+<li>Compare old vs new records.</li>
+<li>For each changed field, build a <code>Map&lt;String, String&gt;</code> with field name and new value.</li>
+<li>Serialize the map into JSON.</li>
+<li>Call <code>createIntegrationEvents()</code> to queue the event.</li>
+<li>Publish all queued events via <code>publishEvent()</code>.</li>
+</ol>
+<hr />
+<h3 id="4-private-methods"><strong>4. Private Methods</strong></h3>
+<h4 id="createintegrationeventsstring-payload-string-objecttype-string-requesttype"><code>createIntegrationEvents(String payload, String objectType, String requestType)</code></h4>
+<ul>
+<li>Converts the JSON payload into a <code>Platform Event</code> instance.</li>
+<li>Queues the event in <code>eventsToPublish</code>.</li>
+</ul>
+<h4 id="publishevent"><code>publishEvent()</code></h4>
+<ul>
+<li>Publishes all queued events to the EventBus.</li>
+<li>Clears the event list if not in a test context.</li>
+</ul>
+<hr />
+<h3 id="5-generic-processing-logic"><strong>5. Generic Processing Logic</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Retrieve fields to track from Custom Metadata (<code>Field_List__c</code>)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>For each SObject, compare old vs new values</td>
+</tr>
+<tr>
+<td>3</td>
+<td>If a field changed, add to <code>changedFieldMap</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Include optional reference fields if present on record</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Serialize map into JSON and call <code>createIntegrationEvents()</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td>After processing all records, call <code>publishEvent()</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="6-example-json-payload-published-event"><strong>6. Example JSON Payload (Published Event)</strong></h3>
+<pre><code class="language-json">{
+  &quot;Id&quot;: &quot;001XXXXXXXXXXXX&quot;,
+  &quot;Name&quot;: &quot;Updated Record Name&quot;,
+  &quot;Status__c&quot;: &quot;Active&quot;,
+  &quot;Amount__c&quot;: 250.50
+}
+</code></pre>
+<hr />
+<h3 id="7-error-handling"><strong>7. Error Handling</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No fields configured in metadata</td>
+<td>No events published</td>
+</tr>
+<tr>
+<td>Invalid SObject</td>
+<td>Throws a runtime exception</td>
+</tr>
+<tr>
+<td>Field does not exist on SObject</td>
+<td>Skips that field</td>
+</tr>
+<tr>
+<td>Event publish fails</td>
+<td>Exception thrown by EventBus</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="8-flow-trigger-usage"><strong>8. Flow / Trigger Usage</strong></h3>
+<ul>
+<li>
+<p>Can be called from <strong>Record-Triggered Flows</strong>:</p>
+</li>
+<li>
+<p>Pass old and new records as <code>SObject</code> lists.</p>
+</li>
+<li>The handler automatically detects changes.</li>
+<li>Can be reused for <strong>any object</strong> by creating the appropriate <strong>Custom Metadata record</strong>.</li>
+<li>Platform Events can then be subscribed to by downstream systems.</li>
+</ul>
+<hr />
+<h1 id="generic-apex-version">✅ <strong>Generic Apex Version</strong></h1>
+<pre><code class="language-apex">public class GenericObjectChangeHandler {
+    public static List&lt;Outbound_Integration_Event__e&gt; eventsToPublish = new List&lt;Outbound_Integration_Event__e&gt;();
+    public static List&lt;String&gt; fieldsToCheck = new List&lt;String&gt;();
+
+    public static void processChangedFields(List&lt;SObject&gt; oldRecords, List&lt;SObject&gt; newRecords) {
+        if (newRecords == null || newRecords.isEmpty()) return;
+
+        fieldsToCheck.clear();
+        String objectName = String.valueOf(newRecords[0].getSObjectType());
+
+        Object_Fields_Change__mdt config = [
+            SELECT Field_List__c 
+            FROM Object_Fields_Change__mdt 
+            WHERE DeveloperName = :objectName
+            LIMIT 1
+        ];
+
+        if (config.Field_List__c != null) {
+            for (String f : config.Field_List__c.split(',')) {
+                if (!String.isBlank(f)) fieldsToCheck.add(f.trim());
+            }
+        }
+
+        processRecords(oldRecords, newRecords, fieldsToCheck, objectName);
+    }
+
+    private static void processRecords(List&lt;SObject&gt; oldRecords, List&lt;SObject&gt; newRecords, List&lt;String&gt; fieldsToCheck, String objectName) {
+        Schema.SObjectType sObjectType = newRecords[0].getSObjectType();
+        Map&lt;String, Schema.SObjectField&gt; fieldMap = sObjectType.getDescribe().fields.getMap();
+
+        for (Integer i = 0; i &lt; newRecords.size(); i++) {
+            SObject newRec = newRecords[i];
+            SObject oldRec = (oldRecords != null &amp;&amp; oldRecords.size() &gt; i) ? oldRecords[i] : null;
+            Map&lt;String, String&gt; changedFieldMap = new Map&lt;String, String&gt;();
+
+            for (String fieldName : fieldsToCheck) {
+                Object oldVal = (oldRec != null) ? oldRec.get(fieldName) : null;
+                Object newVal = newRec.get(fieldName);
+
+                Boolean isChanged = (oldRec == null) 
+                    ? (newVal != null) 
+                    : (oldVal == null &amp;&amp; newVal != null) || (oldVal != null &amp;&amp; !oldVal.equals(newVal));
+
+                if (isChanged) changedFieldMap.put(fieldName, String.valueOf(newVal));
+            }
+
+            if (!changedFieldMap.isEmpty()) {
+                changedFieldMap.put('Id', String.valueOf(newRec.get('Id')));
+                String payload = JSON.serialize(changedFieldMap);
+                createIntegrationEvents(payload, objectName, 'Update');
+            }
+        }
+
+        publishEvent();
+    }
+
+    private static void createIntegrationEvents(String payload, String objectType, String requestType){
+        Map&lt;String, Object&gt; payloadMap = (Map&lt;String, Object&gt;) JSON.deserializeUntyped(payload);
+        String recordId = String.valueOf(payloadMap.get('Id'));
+
+        eventsToPublish.add(new Outbound_Integration_Event__e(
+            Object__c = objectType,
+            Payload__c = payload,
+            RecordId__c = recordId,
+            Request_Type__c = requestType
+        ));
+    }
+
+    private static void publishEvent(){
+        if (!eventsToPublish.isEmpty()) {
+            EventBus.publish(eventsToPublish);
+            if (!Test.isRunningTest()) eventsToPublish.clear(); 
+        }
+    }
+}
+</code></pre>
+<hr />
+<p>This generic version:</p>
+<ul>
+<li>Works with <strong>any SObject</strong></li>
+<li>Reads <strong>fields to track</strong> dynamically from metadata</li>
+<li>Publishes <strong>Platform Events</strong> automatically</li>
+<li>No hard-coded object references</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
