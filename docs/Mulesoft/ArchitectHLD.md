@@ -18,34 +18,45 @@ Two integration flows are required:
 ## High Level Architecture (text + diagram)
 
 ```mermaid
-flowchart LR
-  subgraph SalesforceSide
-    SFlow[Salesforce Flow / Platform Event]
-  end
-  subgraph MuleAnypoint
-    direction TB
-    EXP_Salesforce[Experience API (HTTP listener)\n/mule-apps/exp-salesforce]
-    PROC_SP[Process API: SalesToThirdParty\n/mule-apps/proc-sales-3p]
-    SAPI_Third[System API: ThirdParty-REST\n/mule-apps/sapi-third]
-    SAPI_SF[System API: Salesforce-Connector\n/mule-apps/sapi-salesforce]
-    SAPI_SQL[System API: SQL-DB (JDBC)\n/mule-apps/sapi-sql]
-    SCHED[Scheduler App\n/mule-apps/sched-sql-extract]
-    MQ[Anypoint MQ or DLQ]
-    LOGS[Logging & Audit (Elastic / Splunk)]
-    API_GATEWAY[API Gateway / Manager]
-  end
+flowchart TB
+    %% Salesforce Trigger
+    SF["Salesforce Flow / Platform Event"]:::salesforce
 
-  SFlow -->|HTTP POST /v1/sales/record-change| EXP_Salesforce --> PROC_SP --> SAPI_Third --> ThirdParty[ThirdParty REST]
-  ThirdParty -->|200/4xx/5xx| SAPI_Third --> PROC_SP --> EXP_Salesforce --> SFlow
+    %% MuleSoft Layers
+    subgraph MuleSoft["API-led Architecture"]
+        direction TB
+        EXP["Experience API (acme-exp-sales-inbound)<br>- HTTP Listener<br>- Auth, Validation"]:::exp
+        PROC_SF3P["Process API (acme-proc-sales-to-3p)<br>- Transform & Orchestrate"]:::proc
+        SAPI_3P["System API (acme-sapi-thirdparty-rest)<br>- Call ThirdParty REST"]:::sapi
+        SAPI_SF["System API (acme-sapi-salesforce)<br>- Salesforce Connector"]:::sapi
+        SCHED["Scheduler App (acme-sched-sql-extract)<br>- Cron Trigger"]:::exp
+        PROC_SQLSF["Process API (acme-proc-sql-to-sales)<br>- Transform & Batch Upsert"]:::proc
+        SAPI_SQL["System API (acme-sapi-sql-db)<br>- JDBC Query"]:::sapi
+    end
 
-  SCHED -->|cron| SAPI_SQL --> PROC_SP --> SAPI_SF --> Salesforce
-  SAPI_SF -->|200/4xx/5xx| PROC_SP --> MQ
+    %% Third-Party Systems
+    TP["ThirdParty REST API"]:::external
+    DB[(SQL Database)]:::external
 
-  EXP_Salesforce --- API_GATEWAY
-  SAPI_Third --- API_GATEWAY
-  SAPI_SF --- API_GATEWAY
-  LOGS --- EXP_Salesforce
-  LOGS --- SCHED
+    %% FLOW 1: Salesforce -> Mule -> ThirdParty
+    SF -->|HTTP POST /exp/sales/v1/record-change| EXP
+    EXP --> PROC_SF3P
+    PROC_SF3P -->|Transform + Call| SAPI_3P
+    SAPI_3P -->|POST /third/api| TP
+    TP -->|Response 200/4xx/5xx| SAPI_3P --> PROC_SF3P --> EXP --> SF
+
+    %% FLOW 2: SQL -> Mule -> Salesforce
+    SCHED -->|Cron Trigger| SAPI_SQL
+    SAPI_SQL -->|Changed Records| PROC_SQLSF
+    PROC_SQLSF -->|Transform to Salesforce Schema| SAPI_SF
+    SAPI_SF -->|Upsert via Composite API| SF
+
+    %% Styles
+    classDef exp fill:#4BA3C3,stroke:#2B7A8B,stroke-width:2px,color:white;
+    classDef proc fill:#F5A623,stroke:#C47C00,stroke-width:2px,color:black;
+    classDef sapi fill:#6B8E23,stroke:#476A17,stroke-width:2px,color:white;
+    classDef salesforce fill:#00A1E0,stroke:#0076A8,stroke-width:2px,color:white;
+    classDef external fill:#999,stroke:#333,stroke-width:1.5px,color:white;
 ```
 
 ---
