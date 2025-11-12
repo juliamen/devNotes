@@ -9,7 +9,21 @@ nav:
    - gitFlow : Salesforce/gitFlow.md
    - parseDate : Salesforce/parseDate.md
  - Mulesoft : 
+   - APIGatewayAutodiscovery : Mulesoft/APIGatewayAutodiscovery.md
+   - APILedArchitecture : Mulesoft/APILedArchitecture.md
    - AzureKeyVault : Mulesoft/AzureKeyVault.md
+   - AnypointSecureAPI : Mulesoft/AnypointSecureAPI.md
+   - ObjectStore : Mulesoft/ObjectStore.md
+   - ObjectStoreLock : Mulesoft/ObjectStoreLock.md
+   - Routing : Mulesoft/Routing.md
+   - SQLPagination : Mulesoft/SQLPagination.md
+   - VMQueueObjectStoreComparison : Mulesoft/VMQueueObjectStoreComparison.md
+   - VMQueues : Mulesoft/VMQueues.md
+   - VirtualPrivateSpaceVPN : Mulesoft/VirtualPrivateSpaceVPN.md
+   - cachingObjStore : Mulesoft/cachingObjStore.md
+   - dataMasking : Mulesoft/dataMasking.md
+   - envVariables : Mulesoft/envVariables.md
+   - projectSetup : Mulesoft/projectSetup.md
 theme:
   name: material
   language: en
