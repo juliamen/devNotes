@@ -1,5 +1,6 @@
 site_name: My Dev Knowledge Base
 site_url: https://juliamen.github.io/devNotes/
+use_directory_urls: false
 
 nav: 
  - Home : index.md
