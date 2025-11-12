@@ -8,26 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://juliamen.github.io/devNotes/index.html">
+        <link rel="canonical" href="https://juliamen.github.io/devNotes/Salesforce/Formstack.html">
       
       
+        <link rel="prev" href="../index.html">
       
-        <link rel="next" href="Salesforce/Formstack.html">
+      
+        <link rel="next" href="JSON-to-SObject.html">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
-        <title>My Dev Knowledge Base</title>
+        <title>Formstack - My Dev Knowledge Base</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#formstack-documents-quick-start-guide-salesforce" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="My Dev Knowledge Base" class="md-header__button md-logo" aria-label="My Dev Knowledge Base" data-md-component="logo">
+    <a href="../index.html" title="My Dev Knowledge Base" class="md-header__button md-logo" aria-label="My Dev Knowledge Base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Formstack
             
           </span>
         </div>
@@ -197,11 +199,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="index.html" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
         
   
   
@@ -218,11 +218,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="Salesforce/Formstack.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="Formstack.html" class="md-tabs__link">
           
   
   
@@ -242,7 +244,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="Mulesoft/ArchitectHLD.html" class="md-tabs__link">
+        <a href="../Mulesoft/ArchitectHLD.html" class="md-tabs__link">
           
   
   
@@ -276,7 +278,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="My Dev Knowledge Base" class="md-nav__button md-logo" aria-label="My Dev Knowledge Base" data-md-component="logo">
+    <a href="../index.html" title="My Dev Knowledge Base" class="md-nav__button md-logo" aria-label="My Dev Knowledge Base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -289,6 +291,74 @@
     
       
       
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Salesforce
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Salesforce
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
     
@@ -308,7 +378,7 @@
   
   
   <span class="md-ellipsis">
-    Home
+    Formstack
     
   </span>
   
@@ -316,12 +386,12 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+      <a href="Formstack.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Home
+    Formstack
     
   </span>
   
@@ -344,18 +414,87 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#1-pre-installation-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      1. Pre-Installation Steps
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
+  <a href="#2-installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Project layout
+      2. Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-setup-a-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Setup a Template
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-configure-template-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Configure Template Settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-map-template-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Map Template Fields
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-troubleshooting-common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Troubleshooting / Common Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Troubleshooting / Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-reason-for-referral-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Reason for Referral Field
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-assign-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Assign Permissions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Notes
     </span>
   </a>
   
@@ -368,69 +507,6 @@
     </li>
   
 
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Salesforce
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Salesforce
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Salesforce/Formstack.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Formstack
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -440,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Salesforce/JSON-to-SObject.html" class="md-nav__link">
+      <a href="JSON-to-SObject.html" class="md-nav__link">
         
   
   
@@ -463,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Salesforce/SobjectChangeHandler.html" class="md-nav__link">
+      <a href="SobjectChangeHandler.html" class="md-nav__link">
         
   
   
@@ -486,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Salesforce/VirtualRemoteAssistant.html" class="md-nav__link">
+      <a href="VirtualRemoteAssistant.html" class="md-nav__link">
         
   
   
@@ -509,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Salesforce/gitFlow.html" class="md-nav__link">
+      <a href="gitFlow.html" class="md-nav__link">
         
   
   
@@ -532,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Salesforce/parseDate.html" class="md-nav__link">
+      <a href="parseDate.html" class="md-nav__link">
         
   
   
@@ -603,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/ArchitectHLD.html" class="md-nav__link">
+      <a href="../Mulesoft/ArchitectHLD.html" class="md-nav__link">
         
   
   
@@ -626,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/ArchitectLLD.html" class="md-nav__link">
+      <a href="../Mulesoft/ArchitectLLD.html" class="md-nav__link">
         
   
   
@@ -649,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/APIGatewayAutodiscovery.html" class="md-nav__link">
+      <a href="../Mulesoft/APIGatewayAutodiscovery.html" class="md-nav__link">
         
   
   
@@ -672,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/APILedArchitecture.html" class="md-nav__link">
+      <a href="../Mulesoft/APILedArchitecture.html" class="md-nav__link">
         
   
   
@@ -695,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/AzureKeyVault.html" class="md-nav__link">
+      <a href="../Mulesoft/AzureKeyVault.html" class="md-nav__link">
         
   
   
@@ -718,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/AnypointSecureAPI.html" class="md-nav__link">
+      <a href="../Mulesoft/AnypointSecureAPI.html" class="md-nav__link">
         
   
   
@@ -741,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/ObjectStore.html" class="md-nav__link">
+      <a href="../Mulesoft/ObjectStore.html" class="md-nav__link">
         
   
   
@@ -764,7 +840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/ObjectStoreLock.html" class="md-nav__link">
+      <a href="../Mulesoft/ObjectStoreLock.html" class="md-nav__link">
         
   
   
@@ -787,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/Routing.html" class="md-nav__link">
+      <a href="../Mulesoft/Routing.html" class="md-nav__link">
         
   
   
@@ -810,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/SQLPagination.html" class="md-nav__link">
+      <a href="../Mulesoft/SQLPagination.html" class="md-nav__link">
         
   
   
@@ -833,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/VMQueueObjectStoreComparison.html" class="md-nav__link">
+      <a href="../Mulesoft/VMQueueObjectStoreComparison.html" class="md-nav__link">
         
   
   
@@ -856,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/VMQueues.html" class="md-nav__link">
+      <a href="../Mulesoft/VMQueues.html" class="md-nav__link">
         
   
   
@@ -879,7 +955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/VirtualPrivateSpaceVPN.html" class="md-nav__link">
+      <a href="../Mulesoft/VirtualPrivateSpaceVPN.html" class="md-nav__link">
         
   
   
@@ -902,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/cachingObjStore.html" class="md-nav__link">
+      <a href="../Mulesoft/cachingObjStore.html" class="md-nav__link">
         
   
   
@@ -925,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/dataMasking.html" class="md-nav__link">
+      <a href="../Mulesoft/dataMasking.html" class="md-nav__link">
         
   
   
@@ -948,7 +1024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/envVariables.html" class="md-nav__link">
+      <a href="../Mulesoft/envVariables.html" class="md-nav__link">
         
   
   
@@ -971,7 +1047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/projectSetup.html" class="md-nav__link">
+      <a href="../Mulesoft/projectSetup.html" class="md-nav__link">
         
   
   
@@ -1021,18 +1097,87 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#1-pre-installation-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      1. Pre-Installation Steps
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
+  <a href="#2-installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Project layout
+      2. Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-setup-a-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Setup a Template
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-configure-template-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Configure Template Settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-map-template-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Map Template Fields
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-troubleshooting-common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Troubleshooting / Common Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Troubleshooting / Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-reason-for-referral-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Reason for Referral Field
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-assign-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Assign Permissions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Notes
     </span>
   </a>
   
@@ -1054,21 +1199,115 @@
 
 
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+<h1 id="formstack-documents-quick-start-guide-salesforce"><strong>Formstack Documents – Quick Start Guide (Salesforce)</strong></h1>
+<h2 id="1-pre-installation-steps"><strong>1. Pre-Installation Steps</strong></h2>
+<ol>
+<li>
+<p><strong>Enable Digital Experiences</strong></p>
+</li>
+<li>
+<p>Setup → Digital Experiences → Check <strong>Enable Digital Experiences</strong></p>
+</li>
+<li>
+<p><strong>Enable CRM Content</strong></p>
+</li>
+<li>
+<p>Setup → Salesforce CRM Content → Check <strong>Enable Salesforce CRM Content</strong></p>
+</li>
+<li>Check all 4 additional checkboxes after enabling</li>
+</ol>
+<blockquote>
+<p>⚠️ For Incommunities projects, only Step 2 may be required.</p>
+</blockquote>
+<hr />
+<h2 id="2-installation"><strong>2. Installation</strong></h2>
+<ol>
+<li>
+<p>Choose your environment:</p>
+</li>
+<li>
+<p><strong>Production:</strong> <a href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04t6S000000td8u">Install Formstack Documents</a></p>
+</li>
+<li>
+<p><strong>Sandbox:</strong> <a href="https://test.salesforce.com/packaging/installPackage.apexp?p0=04t6S000000td8u">Install Formstack Documents</a></p>
+</li>
+<li>
+<p>Complete the installation wizard.</p>
+</li>
+<li>
+<p>Enter your <strong>API Key</strong> and <strong>API Secret</strong> after installation.</p>
+</li>
+</ol>
+<hr />
+<h2 id="3-setup-a-template"><strong>3. Setup a Template</strong></h2>
+<ol>
+<li>App Launcher → <strong>Formstack Documents</strong> → Open the <strong>Formstack Documents tab</strong></li>
+<li>Click <strong>New Document</strong></li>
+<li>Enter a <strong>Template Name</strong></li>
+<li>Click <strong>Upload File</strong> → select your template</li>
+</ol>
+<hr />
+<h2 id="4-configure-template-settings"><strong>4. Configure Template Settings</strong></h2>
+<ol>
+<li>Go to the <strong>Settings</strong> tab → populate relevant settings for your template</li>
+<li>
+<p>Go to <strong>Deliver tab</strong> → <strong>Create a Delivery</strong></p>
+</li>
+<li>
+<p>Select <strong>Salesforce</strong> as the destination</p>
+</li>
+<li>Log in with Salesforce credentials</li>
+<li>Fill in <strong>Record Id</strong> → select where the document should be saved (Attachments or Files)</li>
+</ol>
+<hr />
+<h2 id="5-map-template-fields"><strong>5. Map Template Fields</strong></h2>
+<ol>
+<li>Go to <strong>Formstack Mapping tab</strong> → Click <strong>New Mapping</strong></li>
+<li>Select the uploaded template</li>
+<li>Map the required fields to Salesforce object fields</li>
+</ol>
+<hr />
+<h2 id="6-troubleshooting-common-issues"><strong>6. Troubleshooting / Common Issues</strong></h2>
+<h3 id="61-reason-for-referral-field"><strong>6.1 Reason for Referral Field</strong></h3>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li>Issue: Merge field renders as <code>a;b;c;d;e</code></li>
+<li>
+<p>Solution (Bulleted List):</p>
+</li>
+<li>
+<p>Create <strong>Case.Formstack_Reason_For_Referral</strong> field</p>
+</li>
+<li>
+<p>Update IntelliPrint – Outbound flow:</p>
+<ul>
+<li>Assign <code>Case.Formstack_Reason_For_Referral</code> to a local variable</li>
+<li>Create a formula field:</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
+<p><code>text
+ SUBSTITUTE("&lt;ul style=list-style-type:disc&gt;&lt;li&gt;" &amp; {!changeRFRFormat} &amp; "&lt;/ul&gt;", ";", "&lt;li&gt;")</code>
+  4. Update <code>Case.Formstack_Reason_For_Referral</code> with formula</p>
+</li>
+</ul>
+<hr />
+<h2 id="7-assign-permissions"><strong>7. Assign Permissions</strong></h2>
+<p>Ensure all users who generate Formstack documents have a Permission Set including:</p>
+<ul>
+<li><strong>Formstack Mappings</strong></li>
+<li><strong>Formstack Documents</strong></li>
+<li><strong>Formstack Mapping Filter</strong></li>
+<li><strong>Formstack Mapping Criteria</strong></li>
+<li><strong>Field Mappings</strong></li>
+</ul>
+<hr />
+<h2 id="8-notes"><strong>8. Notes</strong></h2>
+<ul>
+<li>Always verify <strong>CRM Content</strong> is enabled before installation.</li>
+<li>After installation, make sure <strong>API credentials</strong> are valid.</li>
+<li>Test document generation on a sandbox before deploying to production.</li>
+</ul>
+<hr />
+<p>This Quick Start Guide condenses the full instructions into <strong>actionable steps</strong>, suitable for admins to follow in order without referring to the full documentation.</p>
+<hr />
 
 
 
@@ -1123,10 +1362,10 @@ docs/
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>

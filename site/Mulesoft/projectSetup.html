@@ -8,26 +8,26 @@
       
       
       
-        <link rel="canonical" href="https://juliamen.github.io/devNotes/index.html">
+        <link rel="canonical" href="https://juliamen.github.io/devNotes/Mulesoft/projectSetup.html">
+      
+      
+        <link rel="prev" href="envVariables.html">
       
       
       
-        <link rel="next" href="Salesforce/Formstack.html">
-      
-      
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
-        <title>My Dev Knowledge Base</title>
+        <title>projectSetup - My Dev Knowledge Base</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#salesforce-mulesoft-bidirectional-integration-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="My Dev Knowledge Base" class="md-header__button md-logo" aria-label="My Dev Knowledge Base" data-md-component="logo">
+    <a href="../index.html" title="My Dev Knowledge Base" class="md-header__button md-logo" aria-label="My Dev Knowledge Base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              projectSetup
             
           </span>
         </div>
@@ -197,11 +197,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="index.html" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
         
   
   
@@ -222,7 +220,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="Salesforce/Formstack.html" class="md-tabs__link">
+        <a href="../Salesforce/Formstack.html" class="md-tabs__link">
           
   
   
@@ -238,11 +236,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="Mulesoft/ArchitectHLD.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="ArchitectHLD.html" class="md-tabs__link">
           
   
   
@@ -276,7 +276,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="My Dev Knowledge Base" class="md-nav__button md-logo" aria-label="My Dev Knowledge Base" data-md-component="logo">
+    <a href="../index.html" title="My Dev Knowledge Base" class="md-nav__button md-logo" aria-label="My Dev Knowledge Base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -291,32 +291,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -327,44 +305,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project layout
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -417,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Salesforce/Formstack.html" class="md-nav__link">
+      <a href="../Salesforce/Formstack.html" class="md-nav__link">
         
   
   
@@ -440,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Salesforce/JSON-to-SObject.html" class="md-nav__link">
+      <a href="../Salesforce/JSON-to-SObject.html" class="md-nav__link">
         
   
   
@@ -463,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Salesforce/SobjectChangeHandler.html" class="md-nav__link">
+      <a href="../Salesforce/SobjectChangeHandler.html" class="md-nav__link">
         
   
   
@@ -486,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Salesforce/VirtualRemoteAssistant.html" class="md-nav__link">
+      <a href="../Salesforce/VirtualRemoteAssistant.html" class="md-nav__link">
         
   
   
@@ -509,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Salesforce/gitFlow.html" class="md-nav__link">
+      <a href="../Salesforce/gitFlow.html" class="md-nav__link">
         
   
   
@@ -532,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Salesforce/parseDate.html" class="md-nav__link">
+      <a href="../Salesforce/parseDate.html" class="md-nav__link">
         
   
   
@@ -559,24 +499,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -589,7 +534,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Mulesoft
@@ -603,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/ArchitectHLD.html" class="md-nav__link">
+      <a href="ArchitectHLD.html" class="md-nav__link">
         
   
   
@@ -626,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/ArchitectLLD.html" class="md-nav__link">
+      <a href="ArchitectLLD.html" class="md-nav__link">
         
   
   
@@ -649,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/APIGatewayAutodiscovery.html" class="md-nav__link">
+      <a href="APIGatewayAutodiscovery.html" class="md-nav__link">
         
   
   
@@ -672,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/APILedArchitecture.html" class="md-nav__link">
+      <a href="APILedArchitecture.html" class="md-nav__link">
         
   
   
@@ -695,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/AzureKeyVault.html" class="md-nav__link">
+      <a href="AzureKeyVault.html" class="md-nav__link">
         
   
   
@@ -718,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/AnypointSecureAPI.html" class="md-nav__link">
+      <a href="AnypointSecureAPI.html" class="md-nav__link">
         
   
   
@@ -741,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/ObjectStore.html" class="md-nav__link">
+      <a href="ObjectStore.html" class="md-nav__link">
         
   
   
@@ -764,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/ObjectStoreLock.html" class="md-nav__link">
+      <a href="ObjectStoreLock.html" class="md-nav__link">
         
   
   
@@ -787,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/Routing.html" class="md-nav__link">
+      <a href="Routing.html" class="md-nav__link">
         
   
   
@@ -810,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/SQLPagination.html" class="md-nav__link">
+      <a href="SQLPagination.html" class="md-nav__link">
         
   
   
@@ -833,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/VMQueueObjectStoreComparison.html" class="md-nav__link">
+      <a href="VMQueueObjectStoreComparison.html" class="md-nav__link">
         
   
   
@@ -856,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/VMQueues.html" class="md-nav__link">
+      <a href="VMQueues.html" class="md-nav__link">
         
   
   
@@ -879,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/VirtualPrivateSpaceVPN.html" class="md-nav__link">
+      <a href="VirtualPrivateSpaceVPN.html" class="md-nav__link">
         
   
   
@@ -902,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/cachingObjStore.html" class="md-nav__link">
+      <a href="cachingObjStore.html" class="md-nav__link">
         
   
   
@@ -925,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/dataMasking.html" class="md-nav__link">
+      <a href="dataMasking.html" class="md-nav__link">
         
   
   
@@ -948,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/envVariables.html" class="md-nav__link">
+      <a href="envVariables.html" class="md-nav__link">
         
   
   
@@ -968,10 +913,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Mulesoft/projectSetup.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    projectSetup
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="projectSetup.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -982,6 +949,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-quick-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      0) Quick Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-design-the-api-raml-in-design-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Design the API (RAML) in Design Center
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-error-handling-retries-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      7) Error Handling, Retries, Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-governance-security-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      8) Governance, Security &amp; Policies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-deployment-cicd-observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      9) Deployment &amp; CI/CD / Observability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-quick-checklists" class="md-nav__link">
+    <span class="md-ellipsis">
+      10) Quick Checklists
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1021,18 +1071,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#0-quick-prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      0) Quick Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
+  <a href="#1-design-the-api-raml-in-design-center" class="md-nav__link">
     <span class="md-ellipsis">
-      Project layout
+      1) Design the API (RAML) in Design Center
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-error-handling-retries-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      7) Error Handling, Retries, Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-governance-security-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      8) Governance, Security &amp; Policies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-deployment-cicd-observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      9) Deployment &amp; CI/CD / Observability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-quick-checklists" class="md-nav__link">
+    <span class="md-ellipsis">
+      10) Quick Checklists
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful References
     </span>
   </a>
   
@@ -1054,21 +1149,235 @@
 
 
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+<h1 id="salesforce-mulesoft-bidirectional-integration-guide">Salesforce ↔ MuleSoft Bidirectional Integration Guide</h1>
+<h2 id="0-quick-prerequisites">0) Quick Prerequisites</h2>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li>Anypoint Platform account with access to:</li>
+<li>Design Center</li>
+<li>Exchange</li>
+<li>API Manager</li>
+<li>Target Environment</li>
+<li>Anypoint Studio (matching Mule runtime, e.g., Mule 4.x)</li>
+<li>Salesforce org (dev/sandbox) for Connected App</li>
+<li>Credentials/keys for external REST endpoint (and any required authentication)</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+<hr />
+<h2 id="1-design-the-api-raml-in-design-center">1) Design the API (RAML) in Design Center</h2>
+<ol>
+<li><strong>Create API Spec:</strong>  </li>
+<li>Log in → Design Center → Create → New API Specification  </li>
+<li>
+<p>Choose <strong>RAML 1.0</strong>, give name/version, create project  </p>
+</li>
+<li>
+<p><strong>Define API:</strong>  </p>
+</li>
+<li>Add Data Types, Resources, Methods, query/path params, examples, responses  </li>
+<li>Add <code>securitySchemes</code> for OAuth2, client-credentials, JWT if needed  </li>
+<li>
+<p>Use visual or RAML editor; create reusable fragments (types, traits)  </p>
+</li>
+<li>
+<p><strong>Example Responses:</strong>  </p>
+</li>
+<li>
+<p>Add at least one example response per method for mocking &amp; scaffolding  </p>
+</li>
+<li>
+<p><strong>Enable Mocking Service (optional):</strong>  </p>
+</li>
+<li>Public or private mock endpoints for early consumer testing  </li>
+</ol>
+<p><strong>Minimal RAML Example:</strong></p>
+<pre><code class="language-raml">#%RAML 1.0
+title: Integration API
+version: v1
+baseUri: https://api.example.com/{version}
+mediaType: application/json
+
+securitySchemes:
+  oauth_2_0:
+    type: OAuth 2.0
+    describedBy:
+      headers:
+        Authorization:
+          description: &quot;Bearer access token&quot;
+          type: string
+      responses:
+        401:
+          description: Unauthorized
+    settings:
+      accessTokenUri: https://auth.example.com/oauth/token
+      authorizationGrants: [ client_credentials ]
+
+types:
+  Case:
+    type: object
+    properties:
+      Id: string
+      Subject: string
+      Status: string
+
+/cases:
+  get:
+    securedBy: [ oauth_2_0 ]
+    description: Retrieve cases
+    responses:
+      200:
+        body:
+          application/json:
+            type: Case[]
+  post:
+    securedBy: [ oauth_2_0 ]
+    body:
+      application/json:
+        type: Case
+    responses:
+      201:
+        body:
+          application/json:
+            type: Case
+````
+
+---
+
+## 2) Publish RAML to Anypoint Exchange
+
+* Open API Designer → **Publish → Publish to Exchange**
+* Choose semantic version, description, visibility
+* Enables discoverability and use in Studio / API Manager
+* Test the API spec &amp; mock service in Exchange
+
+---
+
+## 3) Import RAML into Anypoint Studio and Scaffold Flows
+
+**Options:**
+
+### A — Import from Exchange (recommended)
+
+1. File → New → Mule Project → Import a published API → From Exchange
+2. Select API/version → finish
+3. Studio imports RAML into `src/main/resources/api` and generates scaffold
+
+### B — Import Local RAML
+
+1. Save RAML locally (`src/main/resources/api/api.raml`)
+2. File → New → Mule Project → right-click RAML → **Generate Flows from Local REST API** (APIkit)
+
+**Notes about scaffolding:**
+
+* APIkit generates one flow per resource/method + API Router
+* Use generated flows as skeleton: add HTTP listener, connectors, transformations
+* Re-generate when spec changes (Studio prompts)
+
+---
+
+## 4) Implement Bidirectional Integration (High-Level)
+
+### A. Salesforce → Mule → External REST
+
+1. **Event trigger:**
+
+   * Platform Events (recommended), Change Data Capture, Outbound Messages, or scheduled jobs
+   * Choose based on volume &amp; consistency
+
+2. **Mule Flow:**
+
+   ```
+   HTTP Listener / Salesforce Connector inbound → Transform Message (DataWeave) → HTTP Request / REST Connector
+   ```
+
+3. **Retries &amp; Idempotency:**
+
+   * Use `until-successful` / queue (Anypoint MQ / persistent VM)
+   * Avoid duplicate processing with idempotency key
+   * Connector reconnection: apply strategy where supported (HTTP Request requires explicit retries)
+
+### B. External REST → Mule → Salesforce
+
+* Expose endpoints via RAML / API → secure with API Manager policies
+* Flow: receive request → validate &amp; transform → Salesforce Connector to create/update or publish Platform Events
+* Protect/throttle with Client ID, rate limiting, JWT, etc.
+
+---
+
+## 5) Configure Salesforce Auth &amp; Connector
+
+* Create **Connected App** in Salesforce
+
+  * OAuth 2.0 JWT Bearer recommended for server-to-server
+  * Upload public cert, configure scopes &amp; pre-approval
+
+* Anypoint Studio:
+
+  * Add Salesforce Connector → configure global connector (JWT or other OAuth/credentials)
+  * Store consumer key / keystore / alias in **Secure Configuration Properties**
+
+**Important:** never hardcode credentials
+
+---
+
+## 6) Data Mapping Example (DataWeave)
+
+```dw
+%dw 2.0
+output application/json
+---
+{
+  caseId: payload.Id,
+  subject: payload.Subject,
+  status: payload.Status,
+  submittedAt: payload.CreatedDate as String
+}
 </code></pre>
+<hr />
+<h2 id="7-error-handling-retries-testing">7) Error Handling, Retries, Testing</h2>
+<ul>
+<li><strong>Error Handling:</strong> use <code>error-handler</code>, <code>on-error-continue</code>, <code>on-error-propagate</code></li>
+<li>
+<p><strong>Retries:</strong> until-successful or queue-driven for idempotent ops</p>
+</li>
+<li>
+<p>Connector reconnection strategies for DB/JMS; HTTP Request needs explicit retries</p>
+</li>
+<li><strong>Automated Tests:</strong> MUnit for flows; MUnit Test Recorder for complex flows</li>
+</ul>
+<hr />
+<h2 id="8-governance-security-policies">8) Governance, Security &amp; Policies</h2>
+<ul>
+<li>Publish API → create API instance in <strong>API Manager</strong> → attach runtime (Autodiscovery)</li>
+<li>Apply policies: Client ID enforcement, OAuth token, rate limiting, JWT validation</li>
+<li>Policies are runtime-enforced, no code change</li>
+</ul>
+<hr />
+<h2 id="9-deployment-cicd-observability">9) Deployment &amp; CI/CD / Observability</h2>
+<ul>
+<li>Deploy to CloudHub, Runtime Fabric, or on-prem Mule runtime</li>
+<li>Use Maven / Anypoint CLI / Jenkins / GitHub Actions for CI/CD</li>
+<li>Enable Anypoint Monitoring &amp; alerts; integrate logs with aggregation tools</li>
+<li>API versioning: semantic versioning, Exchange versions for consumers</li>
+</ul>
+<hr />
+<h2 id="10-quick-checklists">10) Quick Checklists</h2>
+<ul>
+<li>[ ] RAML defines types, examples, security schemes</li>
+<li>[ ] Publish spec to Exchange; enable mock service</li>
+<li>[ ] Import API to Studio / generate flows via APIkit</li>
+<li>[ ] Configure Salesforce Connector (JWT for server-to-server); secure secrets</li>
+<li>[ ] Apply API Manager policies; enable Autodiscovery</li>
+<li>[ ] Add MUnit tests &amp; mocks; create CI/CD pipeline</li>
+</ul>
+<hr />
+<h2 id="useful-references">Useful References</h2>
+<ul>
+<li><a href="https://docs.mulesoft.com">Publish API Spec from Design Center → Exchange</a></li>
+<li><a href="https://docs.mulesoft.com">Import / Generate flows from RAML in Anypoint Studio (APIkit)</a></li>
+<li><a href="https://docs.mulesoft.com">Mocking Service (Design Center)</a></li>
+<li><a href="https://docs.mulesoft.com">Secure Configuration Properties</a></li>
+<li><a href="https://docs.mulesoft.com">Salesforce Connector &amp; JWT Flow</a></li>
+<li><a href="https://docs.mulesoft.com">API Manager &amp; Policies</a></li>
+</ul>
 
 
 
@@ -1123,10 +1432,10 @@ docs/
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
