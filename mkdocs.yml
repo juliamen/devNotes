@@ -9,6 +9,8 @@ nav:
    - gitFlow : Salesforce/gitFlow.md
    - parseDate : Salesforce/parseDate.md
  - Mulesoft : 
+   - ArchitectHLD : Mulesoft/ArchitectHLD.md 
+   - ArchitectLLD : Mulesoft/ArchitectLLD.md
    - APIGatewayAutodiscovery : Mulesoft/APIGatewayAutodiscovery.md
    - APILedArchitecture : Mulesoft/APILedArchitecture.md
    - AzureKeyVault : Mulesoft/AzureKeyVault.md
