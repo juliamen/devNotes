@@ -1,4 +1,6 @@
 site_name: My Dev Knowledge Base
+site_url: https://juliamen.github.io/devNotes/
+
 nav: 
  - Home : index.md
  - Salesforce :
