@@ -9,23 +9,25 @@
       
       
       
+        <link rel="prev" href="../cachingObjStore/">
       
-        <link rel="next" href="Salesforce/Formstack/">
+      
+        <link rel="next" href="../envVariables/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
-        <title>My Dev Knowledge Base</title>
+        <title>dataMasking - My Dev Knowledge Base</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#data-masking-conditional-logging-in-mulesoft-dataweave-20" class="md-skip">
           Skip to content
         </a>
       
@@ -84,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="My Dev Knowledge Base" class="md-header__button md-logo" aria-label="My Dev Knowledge Base" data-md-component="logo">
+    <a href="../.." title="My Dev Knowledge Base" class="md-header__button md-logo" aria-label="My Dev Knowledge Base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              dataMasking
             
           </span>
         </div>
@@ -195,11 +197,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -220,7 +220,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="Salesforce/Formstack/" class="md-tabs__link">
+        <a href="../../Salesforce/Formstack/" class="md-tabs__link">
           
   
   
@@ -236,11 +236,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="Mulesoft/ArchitectHLD/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../ArchitectHLD/" class="md-tabs__link">
           
   
   
@@ -274,7 +276,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="My Dev Knowledge Base" class="md-nav__button md-logo" aria-label="My Dev Knowledge Base" data-md-component="logo">
+    <a href="../.." title="My Dev Knowledge Base" class="md-nav__button md-logo" aria-label="My Dev Knowledge Base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -289,32 +291,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -325,44 +305,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project layout
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -415,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Salesforce/Formstack/" class="md-nav__link">
+      <a href="../../Salesforce/Formstack/" class="md-nav__link">
         
   
   
@@ -438,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Salesforce/JSON-to-SObject/" class="md-nav__link">
+      <a href="../../Salesforce/JSON-to-SObject/" class="md-nav__link">
         
   
   
@@ -461,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Salesforce/SobjectChangeHandler/" class="md-nav__link">
+      <a href="../../Salesforce/SobjectChangeHandler/" class="md-nav__link">
         
   
   
@@ -484,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Salesforce/VirtualRemoteAssistant/" class="md-nav__link">
+      <a href="../../Salesforce/VirtualRemoteAssistant/" class="md-nav__link">
         
   
   
@@ -507,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Salesforce/gitFlow/" class="md-nav__link">
+      <a href="../../Salesforce/gitFlow/" class="md-nav__link">
         
   
   
@@ -530,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Salesforce/parseDate/" class="md-nav__link">
+      <a href="../../Salesforce/parseDate/" class="md-nav__link">
         
   
   
@@ -557,24 +499,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -587,7 +534,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Mulesoft
@@ -601,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/ArchitectHLD/" class="md-nav__link">
+      <a href="../ArchitectHLD/" class="md-nav__link">
         
   
   
@@ -624,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/ArchitectLLD/" class="md-nav__link">
+      <a href="../ArchitectLLD/" class="md-nav__link">
         
   
   
@@ -647,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/APIGatewayAutodiscovery/" class="md-nav__link">
+      <a href="../APIGatewayAutodiscovery/" class="md-nav__link">
         
   
   
@@ -670,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/APILedArchitecture/" class="md-nav__link">
+      <a href="../APILedArchitecture/" class="md-nav__link">
         
   
   
@@ -693,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/AzureKeyVault/" class="md-nav__link">
+      <a href="../AzureKeyVault/" class="md-nav__link">
         
   
   
@@ -716,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/AnypointSecureAPI/" class="md-nav__link">
+      <a href="../AnypointSecureAPI/" class="md-nav__link">
         
   
   
@@ -739,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/ObjectStore/" class="md-nav__link">
+      <a href="../ObjectStore/" class="md-nav__link">
         
   
   
@@ -762,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/ObjectStoreLock/" class="md-nav__link">
+      <a href="../ObjectStoreLock/" class="md-nav__link">
         
   
   
@@ -785,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/Routing/" class="md-nav__link">
+      <a href="../Routing/" class="md-nav__link">
         
   
   
@@ -808,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/SQLPagination/" class="md-nav__link">
+      <a href="../SQLPagination/" class="md-nav__link">
         
   
   
@@ -831,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/VMQueueObjectStoreComparison/" class="md-nav__link">
+      <a href="../VMQueueObjectStoreComparison/" class="md-nav__link">
         
   
   
@@ -854,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/VMQueues/" class="md-nav__link">
+      <a href="../VMQueues/" class="md-nav__link">
         
   
   
@@ -877,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/VirtualPrivateSpaceVPN/" class="md-nav__link">
+      <a href="../VirtualPrivateSpaceVPN/" class="md-nav__link">
         
   
   
@@ -900,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/cachingObjStore/" class="md-nav__link">
+      <a href="../cachingObjStore/" class="md-nav__link">
         
   
   
@@ -920,10 +867,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Mulesoft/dataMasking/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    dataMasking
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -934,6 +903,107 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      📘 Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 1. Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 3. Explanation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-global-property-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ 4. Global Property Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-example-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧾 5. Example Input
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-example-output-logging-enabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 6. Example Output (Logging Enabled)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-example-output-logging-disabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 7. Example Output (Logging Disabled)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-integration-with-logger-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 8. Integration with Logger Component
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 9. Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -946,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/envVariables/" class="md-nav__link">
+      <a href="../envVariables/" class="md-nav__link">
         
   
   
@@ -969,7 +1039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Mulesoft/projectSetup/" class="md-nav__link">
+      <a href="../projectSetup/" class="md-nav__link">
         
   
   
@@ -1019,18 +1089,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      📘 Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
+  <a href="#1-prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Project layout
+      🧩 1. Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 3. Explanation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-global-property-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ 4. Global Property Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-example-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧾 5. Example Input
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-example-output-logging-enabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 6. Example Output (Logging Enabled)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-example-output-logging-disabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 7. Example Output (Logging Disabled)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-integration-with-logger-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 8. Integration with Logger Component
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 9. Best Practices
     </span>
   </a>
   
@@ -1052,21 +1185,123 @@
 
 
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+<h1 id="data-masking-conditional-logging-in-mulesoft-dataweave-20">Data Masking &amp; Conditional Logging in MuleSoft (DataWeave 2.0)</h1>
+<h2 id="overview">📘 Overview</h2>
+<p>This document explains how to implement <strong>data masking</strong> in MuleSoft using <strong>DataWeave 2.0</strong>, and how to control logging using a global property (<code>enableLogging</code>).<br />
+Sensitive fields are automatically masked with <code>*****</code> before being logged or sent to external systems.</p>
+<hr />
+<h2 id="1-prerequisites">🧩 1. Prerequisites</h2>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li>Mule Runtime <strong>4.x</strong></li>
+<li><strong>DataWeave 2.0</strong></li>
+<li>Global configuration property defined in <code>config.properties</code></li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+<p>Example:</p>
+<pre><code class="language-properties"># config.properties
+enableLogging=true
+````
+
+---
+
+## 🧠 2. DataWeave Script Example
+
+```dw
+%dw 2.0
+output application/json
+import * from dw::util::Values
+
+var enableLogging = p('enableLogging') default false
+
+fun maskData(data) =
+    data
+        mask &quot;Asset_Type_VC&quot; with &quot;*****&quot;
+        mask &quot;Other_Asset_Reference_VC&quot; with &quot;*****&quot;
+        mask &quot;Number_of_Bedrooms_SI&quot; with &quot;*****&quot;
+
+---
+if (enableLogging) 
+    maskData(payload)
+else 
+    &quot;Logging disabled: Sensitive data not shown&quot;
 </code></pre>
+<hr />
+<h2 id="3-explanation">🧱 3. Explanation</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mask</code></td>
+<td>DataWeave operator used to mask fields in the payload</td>
+</tr>
+<tr>
+<td><code>"*****"</code></td>
+<td>Replacement masking value</td>
+</tr>
+<tr>
+<td><code>enableLogging</code></td>
+<td>Boolean global property used to turn logging on/off</td>
+</tr>
+<tr>
+<td><code>p('enableLogging')</code></td>
+<td>Reads property from Mule config/environment</td>
+</tr>
+<tr>
+<td><code>maskData(payload)</code></td>
+<td>Function that masks defined sensitive fields</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-global-property-configuration">⚙️ 4. Global Property Configuration</h2>
+<p>You can define <code>enableLogging</code> from:</p>
+<ul>
+<li><code>config.properties</code></li>
+<li>Environment variable</li>
+<li>Runtime Manager → Application properties</li>
+</ul>
+<p>Example (Runtime Manager override):</p>
+<pre><code class="language-bash">-DenableLogging=false
+</code></pre>
+<hr />
+<h2 id="5-example-input">🧾 5. Example Input</h2>
+<pre><code class="language-json">{
+  &quot;Asset_Type_VC&quot;: &quot;Flat&quot;,
+  &quot;Other_Asset_Reference_VC&quot;: &quot;A12345&quot;,
+  &quot;Number_of_Bedrooms_SI&quot;: &quot;2&quot;,
+  &quot;Postcode&quot;: &quot;SW1A 1AA&quot;
+}
+</code></pre>
+<hr />
+<h2 id="6-example-output-logging-enabled">✅ 6. Example Output (Logging Enabled)</h2>
+<pre><code class="language-json">{
+  &quot;Asset_Type_VC&quot;: &quot;*****&quot;,
+  &quot;Other_Asset_Reference_VC&quot;: &quot;*****&quot;,
+  &quot;Number_of_Bedrooms_SI&quot;: &quot;*****&quot;,
+  &quot;Postcode&quot;: &quot;SW1A 1AA&quot;
+}
+</code></pre>
+<hr />
+<h2 id="7-example-output-logging-disabled">🚫 7. Example Output (Logging Disabled)</h2>
+<pre><code class="language-json">&quot;Logging disabled: Sensitive data not shown&quot;
+</code></pre>
+<hr />
+<h2 id="8-integration-with-logger-component">🧩 8. Integration with Logger Component</h2>
+<p>Add the DataWeave transformation before the logger to ensure masking takes place:</p>
+<pre><code class="language-xml">&lt;set-payload value=&quot;#[dw('classpath:dw/maskData.dwl')]&quot; doc:name=&quot;Mask Sensitive Fields&quot;/&gt;
+&lt;logger level=&quot;INFO&quot; message=&quot;#[payload]&quot; doc:name=&quot;Log Masked Payload&quot;/&gt;
+</code></pre>
+<hr />
+<h2 id="9-best-practices">🔍 9. Best Practices</h2>
+<p>✅ Always mask PII and sensitive data before logging
+✅ Use <code>enableLogging=false</code> in Production
+✅ Use <code>enableLogging=true</code> only in Development/Testing
+✅ Store masking logic in a reusable DWL file (e.g., <code>/src/main/resources/dw/maskData.dwl</code>)</p>
+<hr />
 
 
 
@@ -1121,10 +1356,10 @@ docs/
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
